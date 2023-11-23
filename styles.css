@@ -1,0 +1,63 @@
+*{
+  margin:0;
+  padding:0;
+}
+.header{
+  width:100vw;
+}
+.title{
+  text-align:center;
+  font-size:35px;
+  color:#fff;
+  background-color:#333;
+  padding:20px
+}
+.menu{
+  background-color:#555;
+  padding:10px;
+  list-style-type:none;
+}
+.menu ul{
+  text-align:center;
+}
+.menu li{
+  display:inline;
+  margin:0px 25px;
+  position:relative;/*有疑问*/
+}
+.menu a{
+  color:#fff;
+  text-decoration:none;
+}
+.pic{
+  background-image:url("https://cdn.pixabay.com/photo/2019/06/04/22/40/snowy-owl-4252522_1280.jpg");
+  background-size: cover;
+  height:100vh;
+  width：100vw;
+}
+body{
+  overflow:auto;
+}
+.submenu{
+  display:none;
+  background-color: #fff;
+  position:absolute;
+  top: 100%; /* 修改为相对于父元素底部 */
+  left: 0; /* 修改为相对于父元素左边缘对齐 */
+  width:150px
+}
+.menu li:hover .submenu {
+  display: block;
+}
+.menu li:hover .submenu a{
+  display:block;
+}
+.menu li:hover a{
+  color:red;/*设置所有菜单项*/
+}
+.menu li:hover .submenu a{
+  color:black;
+}/*特殊性更强，用以覆盖上一条对二级菜单项的影响*/
+.submenu li:hover a{
+  text-decoration:underline;
+}/*设定鼠标悬停于二级菜单项时的样式*/
